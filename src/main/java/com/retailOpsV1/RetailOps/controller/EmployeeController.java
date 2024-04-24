@@ -18,6 +18,11 @@ import java.util.List;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class EmployeeController {
     private final EmployeeService employeeService;
+
+    //public EmployeeController(EmployeeService employeeService) {
+     //   this.employeeService = employeeService;
+    //}
+
     @GetMapping("/")
     public ResponseEntity<List<Employee>> getAllEmployees(@RequestHeader("Authorization") String authHeader) {
         List<Employee> employees = employeeService.getAllEmployees(authHeader);

@@ -18,4 +18,8 @@ public class AuthenticationResponse {
     private String lastName;
     private String userName;
     private String roleName;
+    private String supplierName;
+    private String contactPerson;
+    private String email;
+    private String phoneNumber;
 }
