@@ -49,7 +49,7 @@ public class SupplierService {
      }
 
     public AuthenticationResponse register(SupplierDTO request) {
-     var supplier = Supplier.builder()
+    /* var supplier = Supplier.builder()
                 .supplierName(request.getSupplierName())
                 .contactPerson(request.getContactPerson())
                 .email(request.getEmail())
@@ -58,14 +58,14 @@ public class SupplierService {
         supplierRepository.save(supplier);
         var jwtToken = jwtService.generateToken((UserDetails) supplier);
         var refreshToken = jwtService.generateRefreshToken((UserDetails) supplier);
-        return AuthenticationResponse.builder()
-                .accessToken(jwtToken)
-                .supplierName(supplier.getSupplierName())
-                .contactPerson(supplier.getContactPerson())
-                .email(supplier.getEmail())
-                .phoneNumber(supplier.getPhoneNumber())
-                .build();
-        //return null;
+        //return AuthenticationResponse.builder();
+              //  .accessToken(jwtToken)
+                //.supplierName(supplier.getSupplierName())
+                //.contactPerson(supplier.getContactPerson())
+                //.email(supplier.getEmail())
+              //  .phoneNumber(supplier.getPhoneNumber())
+                .build();*/
+        return null;
     }
 
     public Supplier getSupplier(Integer supplierId, String authHeader) {

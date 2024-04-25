@@ -19,11 +19,12 @@ import java.util.Optional;
 
 public class SupplierController {
 
-    @Autowired
-    private SupplierService supplierService;
+    private final SupplierService supplierService;
+    //@Autowired
+
 
     @GetMapping("/")
-    public ResponseEntity<List<Supplier>> getAllSuppliers(@RequestHeader("Authorization") String authHeader) {
+    public ResponseEntity <List<Supplier>> getAllSuppliers(@RequestHeader("Authorization") String authHeader) {
         List<Supplier> suppliers = SupplierService.getAllSuppliers(authHeader);
         return ResponseEntity.ok(suppliers);
     }
