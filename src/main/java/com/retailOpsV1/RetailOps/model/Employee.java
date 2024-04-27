@@ -2,7 +2,6 @@ package com.retailOpsV1.RetailOps.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -40,6 +39,8 @@ public class Employee implements UserDetails {
     @JoinColumn(name = "roleId", referencedColumnName = "roleId")
     private Role role;
 
+@OneToOne(mappedBy = "employee")
+private BranchManager branchManager;
     @JsonIgnore
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

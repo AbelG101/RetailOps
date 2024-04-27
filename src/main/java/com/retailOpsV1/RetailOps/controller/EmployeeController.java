@@ -6,7 +6,6 @@ import com.retailOpsV1.RetailOps.model.DTOs.authentication.AuthenticationRespons
 import com.retailOpsV1.RetailOps.model.Employee;
 import com.retailOpsV1.RetailOps.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
-import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
