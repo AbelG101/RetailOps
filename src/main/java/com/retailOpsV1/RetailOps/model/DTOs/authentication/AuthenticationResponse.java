@@ -18,4 +18,5 @@ public class AuthenticationResponse {
     private String lastName;
     private String userName;
     private String roleName;
+
 }
